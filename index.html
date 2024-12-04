@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quick Quiz</title>
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="./app.css" />
   </head>
   <body>
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Quick Quiz</h1>
-        <a class="btn" href="/game.html">Play</a>
-        <a class="btn" href="/highscores.html">High Scores</a>
+        <a class="btn" href="./game.html">Play</a>
+        <a class="btn" href="./highscores.html">High Scores</a>
       </div>
     </div>
+
+    <script>
+      // Redirect all requests to index.html for SPA
+      const pathname = window.location.pathname;
+      if (pathname !== '/' && pathname !== '/index.html') {
+        window.location.href = '/quiz-app/';
+      }
+    </script>
+    
   </body>
 </html>
